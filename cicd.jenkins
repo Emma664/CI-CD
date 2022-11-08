@@ -1,0 +1,12 @@
+pipelint {
+    agent any
+
+    stage ('Test') {
+    steps {
+        bat 'python test_test.py'
+    }
+
+    }
+
+
+}
