@@ -1,4 +1,4 @@
-pipelint {
+pipeline {
     agent any
 
     stage ('Test') {
