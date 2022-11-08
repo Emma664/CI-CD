@@ -1,8 +1,8 @@
 import pymssql
 
 from checker import *
-conn = pymssql.connect(server='127.0.0.1', user='youruser', password='yourpassword',
-                       database='AdventureWorks2014', port='yourport')
+conn = pymssql.connect(server='127.0.0.1', user='root', password='MegaPass123@',
+                       database='AdventureWorks2014', port='52797')
 
 
 def test_column_completeness_addressline1_address():
