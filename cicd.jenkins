@@ -1,12 +1,11 @@
 pipelint {
     agent any
-
-    stage ('Test') {
-    steps {
-        bat 'python test_test.py'
+    stages {
+        stage ('Test') {
+            steps {
+                echo 'Start testing'
+                bat 'python test_test.py'
+           }
+        }
     }
-
-    }
-
-
 }
