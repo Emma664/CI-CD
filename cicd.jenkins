@@ -11,8 +11,14 @@ pipeline {
         stage ('Test') {
             steps {
                 echo "Start testing script"
-                sh "python3 test_test.py"
+                sh "pytest --junitxml results.xml ."
+                junit 'results.xml'
            }
+        }
+    }
+    post {
+        always {
+            junit 'results.xml'
         }
     }
 }
