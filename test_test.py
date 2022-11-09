@@ -15,11 +15,15 @@ def test_verify_address_FK():
     Test checks whether all foreign keys are valid and exist
 
     """
-    sql_out = conn.execute("""SELECT COUNT(*) count_wrong_FK FROM (
-                              SELECT a.StateProvinceID FROM  person.Address a
-                              LEFT JOIN Person.StateProvince s 
-                              ON a.StateProvinceID = s.StateProvinceID WHERE s.StateProvinceID is NULL) AS t")""")
-    assert sql_out[0][0] == '0', "Foreign key is corrupted"
+    conn_cursor = conn.cursor()
+    conn_cursor.execute("""
+        SELECT COUNT(*) count_wrong_FK FROM (
+        SELECT a.StateProvinceID FROM  person.Address a
+        LEFT JOIN Person.StateProvince s 
+        ON a.StateProvinceID = s.StateProvinceID WHERE s.StateProvinceID is NULL) AS t
+                              """)
+    result = conn_cursor.fetchall()
+    assert result[0][0] == 0, "Foreign key is corrupted"
 
 
 def test_minx_value_length_postalcode_address():

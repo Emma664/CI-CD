@@ -1,4 +1,4 @@
-Hello PyTest task
+# Hello PyTest task
 
 ## Environment setup
 
@@ -17,7 +17,7 @@ https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/change-s
 - to connect to SQL Server database make sure connection through TCP/IP is enabled
 ![img.png](img.png)
 - to provide the correct port run the following query in  SQL Server Management Studio :  
-
+```
 DECLARE @portNumber NVARCHAR(10);
 
 EXEC xp_instance_regread
@@ -33,12 +33,18 @@ EXEC xp_instance_regread
 SELECT [Port Number] = @portNumber;
 
 GO
-
+```
 ## Report
 
-to create the report, run $ pytest . --html-report=./report
+to create the report, run 
+```$ pytest . --html-report=./report```
 in terminal
 
 use git bash
-![img_2.png](img_2.png)
 
+## Execution
+
+to run test print in terminal :
+```
+python -m pytest .
+```
