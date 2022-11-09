@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage ('Test') {
             steps {
-                echo 'Start testing'
-                bat 'python test_test.py'
+                echo "Start testing"
+                sh "python test_test.py"
            }
         }
     }
