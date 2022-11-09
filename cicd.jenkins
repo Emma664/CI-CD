@@ -1,11 +1,19 @@
 pipeline {
     agent any
     stages {
+        stage ('Set up env') {
+            steps {
+                sh "pip3 install -r requirements.txt"
+                sh "pip3 list"
+            }
+            
+        }
         stage ('Test') {
             steps {
-                echo "Start testing"
-                sh "python test_test.py"
+                echo "Start testing script"
+                sh "python3 test_test.py"
            }
         }
     }
 }
+
