@@ -112,7 +112,7 @@ def collect_result(table_name: str, column_name: str, connection_name: str):
         column_name -- name of the column
         connection_name -- name of the connection
 
-    Returns the percentage of valid values to all values in the column.
+    Returns list of columns
     """
     c1 = connection_name.cursor()
     c1.execute(f"select {column_name} from {table_name}")

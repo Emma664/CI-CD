@@ -10,13 +10,20 @@ def test_column_completeness_addressline1_address():
                                                                                         "complete "
 
 
-def test_column_completeness_addressline2_address():
-    assert verify_completeness(collect_result("Person.address", "addressLine2", conn)), "addressLine2 column is not " \
-                                                                                        "complete "
+def test_verify_address_FK():
+    """
+    Test checks whether all foreign keys are valid and exist
+
+    """
+    sql_out = conn.execute("""SELECT COUNT(*) count_wrong_FK FROM (
+                              SELECT a.StateProvinceID FROM  person.Address a
+                              LEFT JOIN Person.StateProvince s 
+                              ON a.StateProvinceID = s.StateProvinceID WHERE s.StateProvinceID is NULL) AS t")"""
+    assert sql_out[0][0] == '0', "Foreign key is corrupted"
 
 
-def test_max_value_length_postalcode_address():
-    assert verify_max_length(collect_result("Person.address", "PostalCode", conn), 5),\
+def test_minx_value_length_postalcode_address():
+    assert verify_min_length(collect_result("Person.address", "PostalCode", conn), 5),\
         f'PostalCode value is longer than 5 '
 
 
@@ -38,3 +45,4 @@ def test_counts_unitmeasure():
 def test_uniqueness_unitmeasure():
     assert verify_uniqueness(collect_result("Production.UnitMeasure", "UnitMeasureCode", conn)),\
         f'UnitMeasureCode values are not unique'
+
