@@ -26,9 +26,9 @@ def test_verify_address_FK():
     assert result[0][0] == 0, "Foreign key is corrupted"
 
 
-def test_minx_value_length_postalcode_address():
-    assert verify_min_length(collect_result("Person.address", "PostalCode", conn), 5),\
-        f'PostalCode value is longer than 5 '
+def test_min_value_length_postalcode_address():
+    assert verify_min_length(collect_result("Person.address", "PostalCode", conn), 2),\
+        f'PostalCode value is shorter than 2 '
 
 
 def test_allowed_values_status_document():
