@@ -18,7 +18,7 @@ def test_verify_address_FK():
     sql_out = conn.execute("""SELECT COUNT(*) count_wrong_FK FROM (
                               SELECT a.StateProvinceID FROM  person.Address a
                               LEFT JOIN Person.StateProvince s 
-                              ON a.StateProvinceID = s.StateProvinceID WHERE s.StateProvinceID is NULL) AS t")"""
+                              ON a.StateProvinceID = s.StateProvinceID WHERE s.StateProvinceID is NULL) AS t")""")
     assert sql_out[0][0] == '0', "Foreign key is corrupted"
 
 
