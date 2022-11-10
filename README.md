@@ -33,7 +33,7 @@ https://www.jenkins.io/doc/book/pipeline/getting-started/#defining-a-pipeline-in
 - in configuration of the pipeline choose Pipeline script from SCM:
 ![image](https://user-images.githubusercontent.com/67369891/201057041-ab783ccb-b4df-445b-8d67-46c275c8987f.png)  
 
-provide link to git repository, branc to use and name of jenkins file  
+provide link to git repository, branch to use and name of jenkins file  
 
 ![image](https://user-images.githubusercontent.com/67369891/201057433-f06edfa6-ac8c-4d6e-b07e-3fce656c13f5.png)
 ![image](https://user-images.githubusercontent.com/67369891/201058043-5bf8d9b8-7dff-4f4f-b267-8ad4ec160558.png)
@@ -42,7 +42,8 @@ provide link to git repository, branc to use and name of jenkins file
 ## Packages you need:
 - pymssql 2.2.5
 - pytest 7.2.0
-- pytest-html-reporter 0.2.9
+- pytest-html-reporter 0.2.9  
+- 
 They are listed in the requirements.txt file
 
 ## Useful hints 
@@ -68,6 +69,11 @@ EXEC xp_instance_regread
 SELECT [Port Number] = @portNumber;
 
 GO
+```
+To provide server to your local host type ipconfig in cmd:  
+![image](https://user-images.githubusercontent.com/67369891/201068356-e6f4da25-fb09-4052-a40b-d64f598bfb63.png)
+```
+ipconfig
 ```
 ### Jenkins pipeline
 to debug pipeline run there is no need to edit jenkins file in the repository  
