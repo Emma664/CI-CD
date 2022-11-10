@@ -6,7 +6,7 @@ pipeline {
                 sh "pip3 install -r requirements.txt"
                 sh "pip3 list"
             }
-
+            
         }
         stage ('Test') {
             steps {
@@ -17,6 +17,10 @@ pipeline {
         }
          stage ('Release code') {
             steps {
+                junit 'results.xml'
+                withCredentials([usernamePassword(credentialsId: '1394bbd4-241f-4d59-86c9-d98c3f604451', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    sh ("git remote set-url origin https://${GIT_PASSWORD}@github.com/Emma664/CI-CD.git")
+                }
                 sh """
                   git reset --hard HEAD
                   git checkout release
@@ -32,5 +36,4 @@ pipeline {
         }
     }
 }
-
 
