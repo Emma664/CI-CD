@@ -130,8 +130,10 @@ jenkins plugin can be used to collect test results in the report
 ![image](https://user-images.githubusercontent.com/67369891/201069770-848b13b6-5ea3-44ac-a906-64a2d4c5f186.png)
 
 ## Execution
-
+### pytest
 to run test print in terminal :
 ```
 python -m pytest .
 ```
+### jenkins
+![image](https://user-images.githubusercontent.com/67369891/201075778-648aed9b-aeb9-4380-9afd-b035a21443b2.png)
