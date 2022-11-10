@@ -5,6 +5,17 @@
 Install jenkins using docker follow the link:
 https://dev.to/andresfmoya/install-jenkins-using-docker-compose-4cab  
 
+Install python to your jenkins container.
+Open docker container in terminal:  
+![image](https://user-images.githubusercontent.com/67369891/201064644-a6930118-4020-4e62-80e7-5f048e11de0c.png)
+type 
+```
+$ apt update
+$ apt install python3
+$ python3
+$ quit()
+```
+
 Define pipeline in SCM:
 https://www.jenkins.io/doc/book/pipeline/getting-started/#defining-a-pipeline-in-scm  
 
