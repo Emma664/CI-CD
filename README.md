@@ -2,11 +2,11 @@
 
 ## Environment setup
 
-Install jenkins using docker follow the link:  
+### Install jenkins using docker follow the link:  
 
 https://dev.to/andresfmoya/install-jenkins-using-docker-compose-4cab  
 
-Install python and pip to your jenkins container.  
+### Install python and pip to your jenkins container.  
 
 Open docker container in terminal:  
 ![image](https://user-images.githubusercontent.com/67369891/201064644-a6930118-4020-4e62-80e7-5f048e11de0c.png)
@@ -19,7 +19,7 @@ type
 # quit()
 ```
 
-Define pipeline in SCM:
+### Define pipeline in SCM:
 https://www.jenkins.io/doc/book/pipeline/getting-started/#defining-a-pipeline-in-scm  
 
 - click new item  
@@ -33,11 +33,24 @@ https://www.jenkins.io/doc/book/pipeline/getting-started/#defining-a-pipeline-in
 - in configuration of the pipeline choose Pipeline script from SCM:
 ![image](https://user-images.githubusercontent.com/67369891/201057041-ab783ccb-b4df-445b-8d67-46c275c8987f.png)  
 
-provide link to git repository, branch to use and name of jenkins file  
+- provide link to git repository, branch to use and name of jenkins file  
 
 ![image](https://user-images.githubusercontent.com/67369891/201057433-f06edfa6-ac8c-4d6e-b07e-3fce656c13f5.png)
 ![image](https://user-images.githubusercontent.com/67369891/201058043-5bf8d9b8-7dff-4f4f-b267-8ad4ec160558.png)
 
+- in order to be able to push to the remote repository you will need credentials  
+1. create token in the repository in github  
+settings 
+![image](https://user-images.githubusercontent.com/67369891/201072922-e7d9415e-1ab0-40d1-a1dd-aaedc3a12bdb.png  
+
+developer settings  
+![image](https://user-images.githubusercontent.com/67369891/201073043-1e15132c-1c36-4aae-acf2-df681a75d144.png)
+
+generate new token 
+![image](https://user-images.githubusercontent.com/67369891/201073213-d1169852-62ae-4a2d-a339-1e6b66a2009f.png)
+
+select scope 
+![image](https://user-images.githubusercontent.com/67369891/201073597-bda2543b-d7c3-4e91-83f8-e9c26bdf413d.png)
 
 ## Packages you need:
 - pymssql 2.2.5
@@ -87,12 +100,15 @@ And rerun the same build with changes in jenkins file
 ![image](https://user-images.githubusercontent.com/67369891/201061388-83bbfe75-ff9e-44ff-8e56-4af876cc9f6d.png)
 
 ## Report
-
+### Pytest
 to create the report, run 
 ```$ pytest . --html-report=./report```
 in terminal
 
 use git bash
+### Jenkins
+jenkins plugin can be used to collect test results in the report  
+![image](https://user-images.githubusercontent.com/67369891/201069770-848b13b6-5ea3-44ac-a906-64a2d4c5f186.png)
 
 ## Execution
 
