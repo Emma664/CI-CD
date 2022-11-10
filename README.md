@@ -8,14 +8,19 @@ https://dev.to/andresfmoya/install-jenkins-using-docker-compose-4cab
 Define pipeline in SCM:
 https://www.jenkins.io/doc/book/pipeline/getting-started/#defining-a-pipeline-in-scm  
 
-- click new item
+- click new item  
+
 ![image](https://user-images.githubusercontent.com/67369891/201055959-d9bcbd33-0fe2-4645-be4a-b23a7a9de367.png)  
 
-- add name:
--![image](https://user-images.githubusercontent.com/67369891/201056371-32ada2f2-396c-405a-90c9-51b704e542d4.png)
-- in configuration of the pipeline choose:
-![image](https://user-images.githubusercontent.com/67369891/201057041-ab783ccb-b4df-445b-8d67-46c275c8987f.png)
-provide link to git repository and name of jenkins file
+- add name:  
+
+![image](https://user-images.githubusercontent.com/67369891/201056371-32ada2f2-396c-405a-90c9-51b704e542d4.png)  
+
+- in configuration of the pipeline choose Pipeline script from SCM:
+![image](https://user-images.githubusercontent.com/67369891/201057041-ab783ccb-b4df-445b-8d67-46c275c8987f.png)  
+
+provide link to git repository and name of jenkins file  
+
 ![image](https://user-images.githubusercontent.com/67369891/201057433-f06edfa6-ac8c-4d6e-b07e-3fce656c13f5.png)
 ![image](https://user-images.githubusercontent.com/67369891/201058043-5bf8d9b8-7dff-4f4f-b267-8ad4ec160558.png)
 
