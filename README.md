@@ -40,16 +40,21 @@ https://www.jenkins.io/doc/book/pipeline/getting-started/#defining-a-pipeline-in
 
 - in order to be able to push to the remote repository you will need credentials  
 1. create token in the repository in github  
-settings 
+
+settings   
+
 ![image](https://user-images.githubusercontent.com/67369891/201072922-e7d9415e-1ab0-40d1-a1dd-aaedc3a12bdb.png  
 
 developer settings  
+
 ![image](https://user-images.githubusercontent.com/67369891/201073043-1e15132c-1c36-4aae-acf2-df681a75d144.png)
 
-generate new token 
+generate new token  
+
 ![image](https://user-images.githubusercontent.com/67369891/201073213-d1169852-62ae-4a2d-a339-1e6b66a2009f.png)
 
-select scope 
+select scope  
+
 ![image](https://user-images.githubusercontent.com/67369891/201073597-bda2543b-d7c3-4e91-83f8-e9c26bdf413d.png)
 
 ## Packages you need:
