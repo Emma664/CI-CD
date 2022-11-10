@@ -43,7 +43,7 @@ https://www.jenkins.io/doc/book/pipeline/getting-started/#defining-a-pipeline-in
 
 settings   
 
-![image](https://user-images.githubusercontent.com/67369891/201072922-e7d9415e-1ab0-40d1-a1dd-aaedc3a12bdb.png  
+![image](https://user-images.githubusercontent.com/67369891/201072922-e7d9415e-1ab0-40d1-a1dd-aaedc3a12bdb.png)  
 
 developer settings  
 
@@ -56,6 +56,20 @@ generate new token
 select scope  
 
 ![image](https://user-images.githubusercontent.com/67369891/201073597-bda2543b-d7c3-4e91-83f8-e9c26bdf413d.png)
+
+2. provide credentials in the pipeline cofiguration
+
+![image](https://user-images.githubusercontent.com/67369891/201074545-fabff987-bc2a-4711-a6eb-fa7e3f4c0efa.png)
+
+3. to use credentials in the pipeline you need your credentialsID:  
+
+![image](https://user-images.githubusercontent.com/67369891/201074881-953724be-eae6-4e22-b1ec-499b93a36229.png)
+
+and use withcredentials block
+```
+                withCredentials([usernamePassword(credentialsId: '1394bbd4-241f-4d59-86c9-d98c3f604451', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    sh ("git remote set-url origin https://${GIT_PASSWORD}@github.com/Emma664/CI-CD.git")
+```
 
 ## Packages you need:
 - pymssql 2.2.5
