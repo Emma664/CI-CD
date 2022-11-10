@@ -55,11 +55,15 @@ SELECT [Port Number] = @portNumber;
 
 GO
 ```
-###Jenkins pipeline
-to debug pipeline run there is no need to edit jenkins file in the repository
-You can go to builds, click on the last buils and choose replay to edit 
-![image](https://user-images.githubusercontent.com/67369891/201061183-aaafc43b-9cbe-4d1d-80f6-a77b5772c5d3.png)
-And rerun the same build with changes in jenkins file
+### Jenkins pipeline
+to debug pipeline run there is no need to edit jenkins file in the repository  
+
+You can go to builds, click on the last buils and choose replay to edit   
+
+![image](https://user-images.githubusercontent.com/67369891/201061183-aaafc43b-9cbe-4d1d-80f6-a77b5772c5d3.png)  
+
+And rerun the same build with changes in jenkins file  
+
 ![image](https://user-images.githubusercontent.com/67369891/201061388-83bbfe75-ff9e-44ff-8e56-4af876cc9f6d.png)
 
 ## Report
